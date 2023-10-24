@@ -4,14 +4,18 @@ import react from '@vitejs/plugin-react-swc';
 import postCssAutoprefixerPlugin from 'autoprefixer';
 import postcssPresetMantine from 'postcss-preset-mantine';
 
-// https://vitejs.dev/config/
 export default defineConfig({
     plugins: [react()],
     root: 'src',
     publicDir: '../public',
+    envPrefix: 'APP_',
     build: {
         outDir: '../build',
         sourcemap: true,
+    },
+    server: {
+        port: 8080,
+        host: true,
     },
     resolve: {
         alias: {
