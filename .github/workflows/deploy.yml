@@ -9,6 +9,8 @@ jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    env:
+      APP_POCKETBASE_URL: ${{ vars.APP_POCKETBASE_URL }}
 
     permissions:
       id-token: write # Needed for auth with Deno Deploy
@@ -22,9 +24,6 @@ jobs:
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
-
-      - name: Show env vars
-        run: "echo $APP_POCKETBASE_URL"
 
       - name: Install Node.js
         uses: actions/setup-node@v3
