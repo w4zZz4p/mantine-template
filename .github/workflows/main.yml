@@ -1,0 +1,13 @@
+name: Bbd
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Echo
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Environment vars
+        run: "echo $APP_POCKETBASE_URL"
