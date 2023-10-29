@@ -35,5 +35,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "free-bear-14"
-          entrypoint: "../main.ts" # 📝 Update the entrypoint if necessary
-          root: "build"
+          entrypoint: "./main.ts" # 📝 Update the entrypoint if necessary
+          root: "server"

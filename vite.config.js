@@ -10,7 +10,7 @@ export default defineConfig({
     publicDir: '../public',
     envPrefix: 'APP_',
     build: {
-        outDir: '../build',
+        outDir: '../server/build',
         sourcemap: true,
     },
     server: {
